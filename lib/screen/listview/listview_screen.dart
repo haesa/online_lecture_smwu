@@ -11,7 +11,9 @@ class ListviewScreen extends StatelessWidget {
         title: Text('ListView'),
       ),
       body: ListView(
-        children: [
+        padding: EdgeInsets.symmetric(horizontal: 24, vertical: 40),
+        scrollDirection: Axis.horizontal,
+        children: const [
           Text('가', style: TextStyle(fontSize: 20)),
           Text('나', style: TextStyle(fontSize: 20)),
           Text('다', style: TextStyle(fontSize: 20)),
