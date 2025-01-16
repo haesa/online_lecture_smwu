@@ -2,7 +2,7 @@ import 'collections.dart';
 
 void main() {
   Collections collections = Collections();
-  collections.listController();
+  collections.setPractice();
 }
 
 void variableTest() {
