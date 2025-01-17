@@ -18,6 +18,7 @@ import 'package:online_lecture_smwu/screen/stateful/stateful_screen.dart';
 import 'package:online_lecture_smwu/screen/stateless/stateless_screen.dart';
 import 'package:online_lecture_smwu/screen/text/text_practice_screen.dart';
 import 'package:online_lecture_smwu/screen/text/text_screen.dart';
+import 'package:online_lecture_smwu/screen/text_form_field/text_form_field_screen.dart';
 
 class ButtonScreen extends StatelessWidget {
   const ButtonScreen({super.key});
@@ -184,6 +185,14 @@ class ButtonScreen extends StatelessWidget {
                       }));
                     },
                     child: Text('Checkbox')),
+                SizedBox(height: 10),
+                ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) {
+                        return TextFormFieldScreen();
+                      }));
+                    },
+                    child: Text('TextFormField')),
               ],
           ),
         ),
