@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:online_lecture_smwu/screen/click/click_screen.dart';
 import 'package:online_lecture_smwu/screen/column_row_advanced_screen.dart';
 import 'package:online_lecture_smwu/screen/column_practice_screen.dart';
 import 'package:online_lecture_smwu/screen/column_screen.dart';
@@ -7,7 +8,7 @@ import 'package:online_lecture_smwu/screen/container_screen.dart';
 import 'package:online_lecture_smwu/screen/listview/listview_builder_screen.dart';
 import 'package:online_lecture_smwu/screen/listview/listview_practice_screen.dart';
 import 'package:online_lecture_smwu/screen/listview/listview_screen.dart';
-import 'package:online_lecture_smwu/screen/row/image_screen.dart';
+import 'package:online_lecture_smwu/screen/image/image_screen.dart';
 import 'package:online_lecture_smwu/screen/row/row_practice_screen.dart';
 import 'package:online_lecture_smwu/screen/row/row_screen.dart';
 import 'package:online_lecture_smwu/screen/stack/stack_practice_screen.dart';
@@ -166,6 +167,14 @@ class ButtonScreen extends StatelessWidget {
                       }));
                     },
                     child: Text('Stateful')),
+                SizedBox(height: 10),
+                ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) {
+                        return ClickScreen();
+                      }));
+                    },
+                    child: Text('Click')),
               ],
           ),
         ),
