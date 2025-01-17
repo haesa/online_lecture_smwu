@@ -20,7 +20,7 @@ class _TextFormFieldScreenState extends State<TextFormFieldScreen> {
   @override
   void initState() {
     // TODO: implement initState
-    // text 값이 변경될 때마다 내부 함수 호출
+    // input 값이 변경될 때마다 이벤트 리스너 호출
     controller.addListener(() {
       setState(() {});
     });
