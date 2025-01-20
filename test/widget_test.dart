@@ -24,14 +24,11 @@ void main() {
 
   Product product = Product(name: '라떼', company: '스타벅스', price: 3000);
 
-
   // var product = Product('아메리카노', '스타벅스');
   // print(product);
   // product.sale();
   // product.sale();
   // print(product);
-
-
 }
 
 void variableTest() {
