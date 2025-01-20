@@ -97,7 +97,7 @@ class _TodoScreenState extends State<TodoScreen> {
         ),
         IconButton(
           onPressed: () {
-            /// 1번: todoModel에 있는 정보를 사용해서 값을 삭제
+            /// 1번: todoModel에 있는 정보를 사용해서 삭제
             // todoList.removeWhere((element) => element.name == todoModel.name);
             // setState(() {});
 
