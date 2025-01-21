@@ -10,6 +10,7 @@ class MemberListScreen extends StatefulWidget {
 
 class _MemberListScreenState extends State<MemberListScreen> {
   Dio dio = Dio(BaseOptions(baseUrl: 'https://244b-110-8-126-227.ngrok-free.app'));
+  bool loading = true;
 
   @override
   void initState() {
@@ -19,8 +20,8 @@ class _MemberListScreenState extends State<MemberListScreen> {
 
   Future<void> getData() async {
     Response response = await dio.get('/api/v1/member/all');
-    print(response.statusCode.toString());
-    print(response.data);
+    loading = false;
+    setState(() {});
   }
 
   @override
@@ -29,6 +30,14 @@ class _MemberListScreenState extends State<MemberListScreen> {
       appBar: AppBar(
         title: Text('Member List'),
       ),
+      body: loading ? CircularProgressIndicator() :
+        SingleChildScrollView(
+          child: Column(
+            children: [
+              Text('data 호출 완료'),
+            ],
+          ),
+        ),
     );
   }
 }
