@@ -6,6 +6,7 @@ import 'package:online_lecture_smwu/screen/column_practice_screen.dart';
 import 'package:online_lecture_smwu/screen/column_screen.dart';
 import 'package:online_lecture_smwu/screen/container_practice_screen.dart';
 import 'package:online_lecture_smwu/screen/container_screen.dart';
+import 'package:online_lecture_smwu/screen/dialog/dialog_screen.dart';
 import 'package:online_lecture_smwu/screen/listview/listview_builder_screen.dart';
 import 'package:online_lecture_smwu/screen/listview/listview_practice_screen.dart';
 import 'package:online_lecture_smwu/screen/listview/listview_screen.dart';
@@ -238,6 +239,14 @@ class ButtonScreen extends StatelessWidget {
                       }));
                     },
                     child: Text('DefaultTabControllerScreen')),
+                SizedBox(height: 10),
+                ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) {
+                        return DialogScreen();
+                      }));
+                    },
+                    child: Text('Dialog')),
               ],
           ),
         ),
