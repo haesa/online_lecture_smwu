@@ -1,5 +1,5 @@
-
 import 'package:flutter/material.dart';
+import 'package:online_lecture_smwu/custom_scroll_behavior.dart';
 import 'package:online_lecture_smwu/screen/button_screen.dart';
 
 void main() {
@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: ButtonScreen(),
+      scrollBehavior: CustomScrollBehavior(),
     );
   }
 }
