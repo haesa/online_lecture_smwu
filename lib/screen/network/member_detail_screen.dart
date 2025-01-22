@@ -21,7 +21,7 @@ class _MemberDetailScreenState extends State<MemberDetailScreen> {
     idController.text = widget.email;
     widget.dio.post('/api/v1/member/find-one', data: {
       'email': widget.email,
-      'password': 'abcd',
+      'password': '1234',
     }).then((value) {
       /// value = {id: 14, email: abcd@naver.com, password: abcd, description: }
       pwController.text = value.data['password'];
@@ -73,7 +73,19 @@ class _MemberDetailScreenState extends State<MemberDetailScreen> {
             ),
             SizedBox(height: 10),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () async {
+                Response response = await widget.dio.patch('/api/v1/member/update', data: {
+                  'email': widget.email,
+                  'password': pwController.text,
+                  'description': descriptionController.text
+                });
+
+                if (response.statusCode == 200) {
+                  ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                    content: Text('업데이트 성공'),
+                  ));
+                }
+              },
               style: ElevatedButton.styleFrom(
                 fixedSize: Size(double.infinity, 50)
               ),
@@ -81,7 +93,22 @@ class _MemberDetailScreenState extends State<MemberDetailScreen> {
             ),
             SizedBox(height: 10),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () async {
+                Response response = await widget.dio.delete('/api/v1/member/delete', data: {
+                  'email': idController.text,
+                  'password': pwController.text,
+                });
+
+                /// 204 : Content가 없다.
+                if(response.statusCode == 204) {
+                  ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                    content: Text('성공'),
+                  ));
+                }
+
+                await Future.delayed(const Duration(seconds: 1));
+                Navigator.pop(context, true);
+              },
               style: ElevatedButton.styleFrom(
                   fixedSize: Size(double.infinity, 50)
               ),
