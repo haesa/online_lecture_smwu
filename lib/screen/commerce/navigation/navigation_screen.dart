@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:online_lecture_smwu/screen/commerce/cart/cart_screen.dart';
+import 'package:online_lecture_smwu/screen/commerce/cart/cart_view_model.dart';
+import 'package:online_lecture_smwu/screen/commerce/category/category_screen.dart';
 import 'package:online_lecture_smwu/screen/commerce/home/home_screen.dart';
 
 class NavigationScreen extends StatefulWidget {
@@ -10,6 +13,12 @@ class NavigationScreen extends StatefulWidget {
 
 class _NavigationScreenState extends State<NavigationScreen> {
   int currentIndex = 0;
+
+  @override
+  void initState() {
+    CartViewModel.instance.clear();
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -25,8 +34,8 @@ class _NavigationScreenState extends State<NavigationScreen> {
         index: currentIndex,
         children: [
           HomeScreen(),
-          Container(color: Colors.blue),
-          Container(color: Colors.purple),
+          CategoryScreen(),
+          CartScreen(),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
