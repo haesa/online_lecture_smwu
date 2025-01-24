@@ -5,6 +5,7 @@ import 'package:online_lecture_smwu/screen/click/click_screen.dart';
 import 'package:online_lecture_smwu/screen/column_row_advanced_screen.dart';
 import 'package:online_lecture_smwu/screen/column_practice_screen.dart';
 import 'package:online_lecture_smwu/screen/column_screen.dart';
+import 'package:online_lecture_smwu/screen/commerce/navigation/navigation_screen.dart';
 import 'package:online_lecture_smwu/screen/container_practice_screen.dart';
 import 'package:online_lecture_smwu/screen/container_screen.dart';
 import 'package:online_lecture_smwu/screen/dialog/dialog_screen.dart';
@@ -255,7 +256,15 @@ class ButtonScreen extends StatelessWidget {
                         return BottomSheetScreen();
                       }));
                     },
-                    child: Text('BottomSheet')),
+                    child: Text('BottomSheet, 여기까지 했었음!!!!!!!!')),
+                SizedBox(height: 10),
+                ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) {
+                        return NavigationScreen();
+                      }));
+                    },
+                    child: Text('Commerce')),
               ],
           ),
         ),
