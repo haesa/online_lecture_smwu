@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:online_lecture_smwu/screen/commerce/home/home_screen.dart';
 
 class NavigationScreen extends StatefulWidget {
   const NavigationScreen({super.key});
@@ -23,7 +24,7 @@ class _NavigationScreenState extends State<NavigationScreen> {
       body: IndexedStack(
         index: currentIndex,
         children: [
-          Container(color: Colors.red),
+          HomeScreen(),
           Container(color: Colors.blue),
           Container(color: Colors.purple),
         ],
