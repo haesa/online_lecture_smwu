@@ -1,0 +1,5 @@
+- GetX 활용
+
+MyController는 int 타입의 count 변수를 static으로 가지고 있다.
+MyController에서 count 값을 변경하는 함수를 호출하면,
+GetXScreen과 GetXSecondScreen에서 화면에 보여주는 count 값이 업데이트 된다.

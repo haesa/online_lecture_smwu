@@ -14,6 +14,7 @@ import 'package:online_lecture_smwu/screen/listview/listview_practice_screen.dar
 import 'package:online_lecture_smwu/screen/listview/listview_screen.dart';
 import 'package:online_lecture_smwu/screen/image/image_screen.dart';
 import 'package:online_lecture_smwu/screen/network/network_screen.dart';
+import 'package:online_lecture_smwu/screen/state_management/state_management_screen.dart';
 import 'package:online_lecture_smwu/screen/tabbar/default_tab_controller_screen.dart';
 import 'package:online_lecture_smwu/screen/pageview/page_view_screen.dart';
 import 'package:online_lecture_smwu/screen/row/row_practice_screen.dart';
@@ -265,6 +266,14 @@ class ButtonScreen extends StatelessWidget {
                       }));
                     },
                     child: Text('Commerce')),
+                SizedBox(height: 10),
+                ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) {
+                        return StateManagementScreen();
+                      }));
+                    },
+                    child: Text('StateManagement')),
               ],
           ),
         ),

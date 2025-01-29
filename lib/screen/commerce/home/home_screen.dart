@@ -6,7 +6,6 @@ import 'package:online_lecture_smwu/screen/commerce/home/widgets/home_subtitle.d
 import 'package:online_lecture_smwu/screen/commerce/home/widgets/product_grid.dart';
 import 'package:online_lecture_smwu/screen/commerce/home/widgets/product_horizontal.dart';
 import 'package:online_lecture_smwu/screen/commerce/model/product_model.dart';
-import 'package:online_lecture_smwu/screen/commerce/util.dart';
 
 import '../assets_path.dart';
 
